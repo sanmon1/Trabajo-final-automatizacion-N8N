@@ -73,11 +73,11 @@ resuelto - Si se resolvio el error /
 
 Como ejetura el flujo
 
-1.Activar el flujo en n8n haciendo clic en el toggle de activación.
-2.Enviar un email a la cuenta de Gmail configurada con una de estas palabras en el asunto: reclamo, queja, problema, reseña, remitente y cuerpo en el texto
-3.El flujo procesa la casilla de email automáticamente cada 5 minutos, cuando detecta un mail que cumple con las condiciones lo analiza "groq" generando una respuesta con su categoria y urgencia del caso
-4.Se crean los registros en airtable del caso
-5.Si es un caso urgente. Va a llegar una notificacion a telegram donde aparece el mensaje que escribio la IA y se a tener que elegir entrado a un link, si se aprueba ese mensaje para mandarle al ciente y que se actualice el airtable o que se escriba manualmente, actualizando airtable y cerrando el caso
+1.Activar el flujo en n8n haciendo clic en el toggle de activación //
+2.Enviar un email a la cuenta de Gmail configurada con una de estas palabras en el asunto: reclamo, queja, problema, reseña, remitente y cuerpo en el texto //
+3.El flujo procesa la casilla de email automáticamente cada 5 minutos, cuando detecta un mail que cumple con las condiciones lo analiza "groq" generando una respuesta con su categoria y urgencia del caso //
+4.Se crean los registros en airtable del caso //
+5.Si es un caso urgente. Va a llegar una notificacion a telegram donde aparece el mensaje que escribio la IA y se a tener que elegir entrado a un link, si se aprueba ese mensaje para mandarle al ciente y que se actualice el airtable o que se escriba manualmente, actualizando airtable y cerrando el caso //
 6.Si es una urgencia baja. El mensaje se mandara automaticamente al cliente y actualizando el airtable, cerrando el caso
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
