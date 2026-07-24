@@ -62,12 +62,12 @@ Fecha_cierre - Fecha de cierre de solicitud /
 
 Tabla: Errores
 
-Error_ID - ID del error
-Tipo_error - Tipo de error
-Detalle - Descripcion del error 
-Nodo_origen - En que nodo se origino el error
-Fecha_error - Fecha del error
-resuelto - Si se resolvio el error
+Error_ID - ID del error /
+Tipo_error - Tipo de error /
+Detalle - Descripcion del error / 
+Nodo_origen - En que nodo se origino el error /
+Fecha_error - Fecha del error /
+resuelto - Si se resolvio el error /
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
