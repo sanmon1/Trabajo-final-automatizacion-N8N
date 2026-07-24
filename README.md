@@ -71,37 +71,48 @@ resuelto - Si se resolvio el error /
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Como ejetura el flujo
+
+1.Activar el flujo en n8n haciendo clic en el toggle de activación
+2.Enviar un email a la cuenta de Gmail configurada con una de estas palabras en el asunto: reclamo, queja, problema, reseña, remitente y cuerpo en el texto
+3.El flujo procesa la casilla de email automáticamente cada 5 minutos, cuando detecta un mail que cumple con las condiciones lo analiza "groq" generando una respuesta con su categoria y urgencia del caso
+4.Se crean los registros en airtable del caso
+5.Si es un caso urgente. Va a llegar una notificacion a telegram donde aparece el mensaje que escribio la IA y se a tener que elegir entrado a un link, si se aprueba ese mensaje para mandarle al ciente y que se actualice el airtable o que se escriba manualmente, actualizando airtable y cerrando el caso
+6.Si es una urgencia baja. El mensaje se mandara automaticamente al cliente y actualizando el airtable, cerrando el caso
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Documentacion de pruebas
 
 Prueba 1 Email urgente con amenaza de denuncia 
 
 Input:	Email con asunto "reclamo" y el mensaje es "El producto llegó roto, quiero devolución o los denuncio"
-Comportamiento: Groq clasifica como Urgente / Alta, se registra en Airtable y se notifica al manager por Telegram para que tome una decision
-Resultado: Groq asignó urgencia Alta, llegó la notificación a Telegram con los links de aprobación o mandar manual. Se aprobo la respuesta, se envia la respuesta al cliente y se actualiza el estado a Enviado
+Comportamiento Esperado: Groq clasifica como Urgente / Alta, se registra en Airtable y se notifica al manager por Telegram para que tome una decision
+Resultado Obtenido: Groq asignó urgencia Alta, llegó la notificación a Telegram con los links de aprobación o mandar manual. Se aprobo la respuesta, se envia la respuesta al cliente y se actualiza el estado a Enviado
 
 Prueba 2 
 
 Input: Email el asunto "reseña" y mensaje: "Muy buen servicio, quedé muy conforme con la atención. Los recomiendo" //
-Comportamiento: Groq clasifica como Elogio / Baja. Se responde automáticamente al cliente //
-Resultado: Groq asignó urgencia Baja. Se respondió automáticamente al cliente sin que un operador humano intervenga y Airtable se actualizó a estado "Enviado" //
+Comportamiento Esperado: Groq clasifica como Elogio / Baja. Se responde automáticamente al cliente //
+Resultado Obtenido: Groq asignó urgencia Baja. Se respondió automáticamente al cliente sin que un operador humano intervenga y Airtable se actualizó a estado "Enviado" //
 
 Prueba 3
 
 Input: Email el asunto "Hola" y mensaje: "Hola, como estas?" //
-Comportamiento: El IF 1 ignoro el mail por que tiene palabras claves //
-Resultado: El flujo ignoro el mail y no se creo ningun registro en airtable //
+Comportamiento Esperado: El IF 1 ignoro el mail por que tiene palabras claves //
+Resultado Obtenido: El flujo ignoro el mail y no se creo ningun registro en airtable //
 
 Prueba 4
 
 Input: Email con asunto "reclamo" y el cuerpo esta vacío //
-Comportamiento: El IF 2 detecta que el campo texto está vacío y el flujo no continúa //
-Resultado:l cliente de email rechazó el envío con error Client network socket disconnected before secure TLS connection was established — confirmando que un email sin cuerpo no puede procesarse.  //
+Comportamiento Esperado: El IF 2 detecta que el campo texto está vacío y el flujo no continúa //
+Resultado Obtenido:l cliente de email rechazó el envío con error Client network socket disconnected before secure TLS connection was established — confirmando que un email sin cuerpo no puede procesarse.  //
 
 Prueba 5
 
 Input: Email con el asunto "Hola, el producto me vino roto y lo quiero devolver para antes del fin de semana" //
-Comportamiento: El nodo de Http request se queda cargando buscando la url de groq. No la puede encontrar y se manda a la tabla errores //
-Resultado: Se registró en la tabla Errores con detalle: 404 - Unknown request URL //
+Comportamiento Esperado: El nodo de Http request se queda cargando buscando la url de groq. No la puede encontrar y se manda a la tabla errores //
+Resultado Obtenido: Se registró en la tabla Errores con detalle: 404 - Unknown request URL //
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
