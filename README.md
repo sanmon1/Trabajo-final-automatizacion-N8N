@@ -46,20 +46,19 @@ Base de datos- Airtable
 
 Tabla: Reseñas
 
-Cliente_email - Email del remitente
-
-Reseña ID - ID de la consulta
-Canal - Origen de mensaje
-Asunto - Asunto de mail
-Texto_Original - Cuerpo del mail
-Sentimiento - Forma en la que se dirije la otra persona
-Categoria - Si es Reclamo / Sugerencia / Elogio
-Urgencia - si es Bajo / Medio / Alto
-Puntuacion_Negativo - puntuacion que asigna la IA para ver el estado del caso
-Respuesta - Respuesta generado por IA
-Estado - Si esta 	Pendiente / Procesado por IA / Aprobado por Humano / Enviado / Error
-Fecha_Entrada - Fecha de creacion de solicitud
-Fecha_cierre - Fecha de cierre de solicitud
+Cliente_email - Email del remitente /
+Reseña ID - ID de la consulta /
+Canal - Origen de mensaje /
+Asunto - Asunto de mail /
+Texto_Original - Cuerpo del mail /
+Sentimiento - Forma en la que se dirije la otra persona /
+Categoria - Si es Reclamo / Sugerencia / Elogio /
+Urgencia - si es Bajo / Medio / Alto /
+Puntuacion_Negativo - puntuacion que asigna la IA para ver el estado del caso /
+Respuesta - Respuesta generado por IA /
+Estado - Si esta 	Pendiente / Procesado por IA / Aprobado por Humano / Enviado / Error /
+Fecha_Entrada - Fecha de creacion de solicitud /
+Fecha_cierre - Fecha de cierre de solicitud /
 
 Tabla: Errores
 
