@@ -73,7 +73,7 @@ resuelto - Si se resolvio el error /
 
 Como ejetura el flujo
 
-1.Activar el flujo en n8n haciendo clic en el toggle de activación
+1.Activar el flujo en n8n haciendo clic en el toggle de activación.
 2.Enviar un email a la cuenta de Gmail configurada con una de estas palabras en el asunto: reclamo, queja, problema, reseña, remitente y cuerpo en el texto
 3.El flujo procesa la casilla de email automáticamente cada 5 minutos, cuando detecta un mail que cumple con las condiciones lo analiza "groq" generando una respuesta con su categoria y urgencia del caso
 4.Se crean los registros en airtable del caso
