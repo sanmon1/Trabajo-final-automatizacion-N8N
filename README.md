@@ -81,27 +81,27 @@ Resultado: Groq asignó urgencia Alta, llegó la notificación a Telegram con lo
 
 Prueba 2 
 
-Input: Email el asunto "reseña" y mensaje: "Muy buen servicio, quedé muy conforme con la atención. Los recomiendo"
-Comportamiento: Groq clasifica como Elogio / Baja. Se responde automáticamente al cliente
-Resultado: Groq asignó urgencia Baja. Se respondió automáticamente al cliente sin que un operador humano intervenga y Airtable se actualizó a estado "Enviado"
+Input: Email el asunto "reseña" y mensaje: "Muy buen servicio, quedé muy conforme con la atención. Los recomiendo" //
+Comportamiento: Groq clasifica como Elogio / Baja. Se responde automáticamente al cliente //
+Resultado: Groq asignó urgencia Baja. Se respondió automáticamente al cliente sin que un operador humano intervenga y Airtable se actualizó a estado "Enviado" //
 
 Prueba 3
 
-Input: Email el asunto "Hola" y mensaje: "Hola, como estas?"
-Comportamiento: El IF 1 ignoro el mail por que tiene palabras claves
-Resultado: El flujo ignoro el mail y no se creo ningun registro en airtable
+Input: Email el asunto "Hola" y mensaje: "Hola, como estas?" //
+Comportamiento: El IF 1 ignoro el mail por que tiene palabras claves //
+Resultado: El flujo ignoro el mail y no se creo ningun registro en airtable //
 
 Prueba 4
 
-Input: Email con asunto "reclamo" y el cuerpo esta vacío
-Comportamiento: El IF 2 detecta que el campo texto está vacío y el flujo no continúa
-Resultado:l cliente de email rechazó el envío con error Client network socket disconnected before secure TLS connection was established — confirmando que un email sin cuerpo no puede procesarse. 
+Input: Email con asunto "reclamo" y el cuerpo esta vacío //
+Comportamiento: El IF 2 detecta que el campo texto está vacío y el flujo no continúa //
+Resultado:l cliente de email rechazó el envío con error Client network socket disconnected before secure TLS connection was established — confirmando que un email sin cuerpo no puede procesarse.  //
 
 Prueba 5
 
-Input: Email con el asunto "Hola, el producto me vino roto y lo quiero devolver para antes del fin de semana"
-Comportamiento: El nodo de Http request se queda cargando buscando la url de groq. No la puede encontrar y se manda a la tabla errores
-Resultado: Se registró en la tabla Errores con detalle: 404 - Unknown request URL
+Input: Email con el asunto "Hola, el producto me vino roto y lo quiero devolver para antes del fin de semana" //
+Comportamiento: El nodo de Http request se queda cargando buscando la url de groq. No la puede encontrar y se manda a la tabla errores //
+Resultado: Se registró en la tabla Errores con detalle: 404 - Unknown request URL //
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
