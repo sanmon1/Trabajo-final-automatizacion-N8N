@@ -23,12 +23,12 @@ El sistema se divie en 2 flujos:
 El flujo principal contiene
 
 1. GmailTrigger-Detecta los email cada 5 minutos
-2. IF Asunto - Filtra los email con palabras claves en el asunto(reclamo, queja, problema, reseña)
-3. IF Campo - Valida que el email tenga cuerpo y remitente
+2. IF Asunto — Filtra los email con palabras claves en el asunto(reclamo, queja, problema, reseña)
+3. IF Campo — Valida que el email tenga cuerpo y remitente
 4. Edit Fields (Set) — Normaliza los campos del email
 5. Airtable Create — Registra la reseña con estado Pendiente
 6. HTTP Request (Groq) — La IA analiza el sentimiento, categoría y urgencia (tiene un limite de 500 tokens por peticion, manteniendo el costo por debajo del centavo de dolar)
-7. Airtable Create - En el caso que la Api de groq falle, se registra un error automatico en la tabla de errores
+7. Airtable Create — En el caso que la Api de groq falle, se registra un error automatico en la tabla de errores
 8. Code (JavaScript) — Parsea la respuesta JSON de Groq
 9. Airtable Update — Actualiza el registro con el análisis de IA (estado: Procesado por IA)
 10. IF Urgencia — Decide si el caso es urgente o no (en el caso que sea una urgencia se manda una notificacion al telegram y si es baja el bot contesta automaticamente y se actualiza estado a contestado por IA
@@ -37,8 +37,8 @@ Flujo Humant-in-the-loop
 
 Webhook — Recibe la decisión del manager cuando hace clic en los links
 IF Decisión — Evalúa si aprobó o decidió enviar manualmente
-Aprobar - Gmail envía la respuesta al cliente y se actualiza el estado a enviado
-Enviar manualmente - un operador humano se pone en contaco con el cliente y se actualiza estado a enviado manual
+Aprobar — Gmail envía la respuesta al cliente y se actualiza el estado a enviado
+Enviar manualmente — un operador humano se pone en contaco con el cliente y se actualiza estado a enviado manual
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
