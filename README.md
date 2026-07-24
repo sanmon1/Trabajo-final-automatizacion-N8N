@@ -47,6 +47,7 @@ Base de datos- Airtable
 Tabla: Reseñas
 
 Cliente_email - Email del remitente
+
 Reseña ID - ID de la consulta
 Canal - Origen de mensaje
 Asunto - Asunto de mail
