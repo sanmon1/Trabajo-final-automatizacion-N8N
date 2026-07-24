@@ -27,7 +27,7 @@ El flujo principal contiene
 3. IF Campo - Valida que el email tenga cuerpo y remitente
 4. Edit Fields (Set) — Normaliza los campos del email
 5. Airtable Create — Registra la reseña con estado Pendiente
-6. HTTP Request (Groq) — La IA analiza el sentimiento, categoría y urgencia
+6. HTTP Request (Groq) — La IA analiza el sentimiento, categoría y urgencia (tiene un limite de 500 tokens por peticion, manteniendo el costo por debajo del centavo de dolar)
 7. Airtable Create - En el caso que la Api de groq falle, se registra un error automatico en la tabla de errores
 8. Code (JavaScript) — Parsea la respuesta JSON de Groq
 9. Airtable Update — Actualiza el registro con el análisis de IA (estado: Procesado por IA)
